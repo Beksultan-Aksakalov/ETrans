@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.expeditor.waybill.WaybillActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/ic_left_arrow" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/logo"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/spinner_border_gray"
+                android:padding="15dp">
+
+                <Spinner
+                    android:id="@+id/spinner_sender_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/spinner_border_gray"
+                android:padding="15dp">
+
+                <Spinner
+                    android:id="@+id/spinner_receiver_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_krizh"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input"
+                android:hint="@string/krizh"
+                android:inputType="numberDecimal"
+                android:maxLength="30"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/colorAccent" />
+
+            <EditText
+                android:id="@+id/edt_krizh"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input"
+                android:hint="@string/krizh_st"
+                android:inputType="number"
+                android:maxLength="30"
+                android:padding="10dp"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/edt_waybill_number"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input"
+                android:hint="@string/waybill_number"
+                android:inputType="number"
+                android:maxLength="30"
+                android:padding="10dp"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sender"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent" />
+
+                    <EditText
+                        android:id="@+id/edt_sender_company"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/input"
+                        android:hint="@string/company_name"
+                        android:inputType="text"
+                        android:maxLength="30"
+                        android:padding="10dp"
+                        android:textColor="@color/yellow"
+                        android:textColorHint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/edt_sender_fullName"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/input"
+                        android:hint="@string/full_name"
+                        android:inputType="text"
+                        android:maxLength="30"
+                        android:padding="10dp"
+                        android:textColor="@color/yellow"
+                        android:textColorHint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/edt_sender_address"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/input"
+                        android:hint="@string/sender_address"
+                        android:inputType="text"
+                        android:maxLength="30"
+                        android:padding="10dp"
+                        android:textColor="@color/yellow"
+                        android:textColorHint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/edt_sender_phone"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/input"
+                        android:hint="@string/sender_phone"
+                        android:inputType="phone"
+                        android:maxLength="12"
+                        android:padding="10dp"
+                        android:textColor="@color/yellow"
+                        android:textColorHint="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/receiver"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent" />
+
+                    <EditText
+                        android:id="@+id/edt_receiver_company"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/input"
+                        android:hint="@string/company_name"
+                        android:inputType="text"
+                        android:maxLength="30"
+                        android:padding="10dp"
+                        android:textColor="@color/yellow"
+                        android:textColorHint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/edt_receiver_fullName"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/input"
+                        android:hint="@string/full_name"
+                        android:inputType="text"
+                        android:maxLength="30"
+                        android:padding="10dp"
+                        android:textColor="@color/yellow"
+                        android:textColorHint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/edt_receiver_address"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/input"
+                        android:hint="@string/receiver_address"
+                        android:inputType="text"
+                        android:maxLength="30"
+                        android:padding="10dp"
+                        android:textColor="@color/yellow"
+                        android:textColorHint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/edt_receiver_phone"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/input"
+                        android:hint="@string/receiver_phone"
+                        android:inputType="phone"
+                        android:maxLength="12"
+                        android:padding="10dp"
+                        android:textColor="@color/yellow"
+                        android:textColorHint="@color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Информация о грузе / Жүк туралы ақпарат"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent" />
+
+                    <EditText
+                        android:id="@+id/edt_seat_count"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/input"
+                        android:hint="@string/seat_count"
+                        android:inputType="numberDecimal"
+                        android:maxLength="30"
+                        android:padding="10dp"
+                        android:textColor="@color/yellow"
+                        android:textColorHint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/edt_cost"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/input"
+                        android:hint="@string/cost"
+                        android:inputType="numberDecimal"
+                        android:maxLength="30"
+                        android:padding="10dp"
+                        android:textColor="@color/yellow"
+                        android:textColorHint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/edt_weight"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/input"
+                        android:hint="@string/weight"
+                        android:inputType="numberDecimal"
+                        android:maxLength="30"
+                        android:padding="10dp"
+                        android:textColor="@color/yellow"
+                        android:textColorHint="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/spinner_border_gray"
+                        android:padding="15dp">
+
+                        <Spinner
+                            android:id="@+id/spinner_weight_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Информация об оплате / Төлем туралы ақпарат"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent" />
+
+                    <LinearLayout
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/spinner_border_gray"
+                        android:padding="15dp">
+
+                        <Spinner
+                            android:id="@+id/spinner_payer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/spinner_border_gray"
+                        android:padding="15dp">
+
+                        <Spinner
+                            android:id="@+id/spinner_pay_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/input_sign"
+                android:text="@string/to_send"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

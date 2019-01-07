@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">ABT E-Trans</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    //Authorization
+    <string name="hint_username">Введите email</string>
+    <string name="hint_password">Введите пароль</string>
+    <string name="to_come_in">Войти</string>
+    <string name="logo">logo</string>
+
+    //Expeditor order
+    <string name="full_name">ФИО</string>
+    <string name="sender_address">Адрес отправителя</string>
+    <string name="sender_phone">Тел. отправителя</string>
+    <string name="direction">Направление</string>
+    <string name="company_name">Компания</string>
+    <string name="seat_count">кол-во мест</string>
+    <string name="good_ready">Готовность груза</string>
+    <string name="get_set">Принять/Отправить</string>
+
+    //Expeditor put
+    <string name="receiver_address">Адрес получателя</string>
+    <string name="receiver_phone">Тел. получателя</string>
+    <string name="waybill_number">№ накладной</string>
+    <string name="cost">Цена</string>
+    <string name="weight">Вес</string>
+    <string name="weight_type">Тип веса</string>
+    <string name="krizh_st">Крыж</string>
+    <string name="krizh">Предыдущий был крыж: __</string>
+    <string name="to_send">Отправить</string>
+    <string name="sender">Отправитель / Жіберуші</string>
+    <string name="receiver">Получатель / Алушы</string>
+
+    //StockMan order
+    <string name="sender_city">Город отправителя</string>
+    <string name="full_name_st">ФИО</string>
+    <string name="receiver_city_st">Город получателя</string>
+    <string name="receiver_address_st">Адрес получателя</string>
+    <string name="receiver_phone_st">Тел. получателя</string>
+    <string name="company_name_st">Компания</string>
+    <string name="seat_count_st">кол-во мест</string>
+    <string name="weight_st">Вес</string>
+    <string name="weight_type_st">Тип веса</string>
+
+</resources>
